@@ -417,6 +417,9 @@ public class KafkaSqlSink {
                     sqlStore.importContent(entity);
                 }
                 break;
+            case UPDATE:
+                sqlStore.updateContentCanonicalHash(value.getCanonicalHash(), key.getContentId(), key.getContentHash());
+                break;
             default:
                 return unsupported(key, value);
         }

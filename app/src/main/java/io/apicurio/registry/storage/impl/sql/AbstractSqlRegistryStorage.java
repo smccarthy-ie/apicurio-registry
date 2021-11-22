@@ -129,7 +129,7 @@ import io.quarkus.security.identity.SecurityIdentity;
  */
 public abstract class AbstractSqlRegistryStorage extends AbstractRegistryStorage {
 
-    private static int DB_VERSION = 5;
+    private static int DB_VERSION = 6;
     private static final Object dbMutex = new Object();
 
     private static final ObjectMapper mapper = new ObjectMapper();
